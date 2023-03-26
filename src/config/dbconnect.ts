@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import dotenv from "dotenv";
-dotenv.config();
+// import dotenv from "dotenv";
+// dotenv.config();
 //fix depracation warning
 mongoose.set("strictQuery", false);
 
