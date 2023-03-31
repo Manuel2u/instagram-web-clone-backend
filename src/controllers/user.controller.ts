@@ -36,6 +36,7 @@ const signUpUser = async (info: signUpInfo) => {
 
   const user = new User({
     username: info.username,
+    fullName : info.fullName,
     email: info.email,
     password: hash,
   });
@@ -46,8 +47,8 @@ const signUpUser = async (info: signUpInfo) => {
 
 const SIGNUP = async (req: Request, res: Response) => {
   try {
-    const { username, email, password } = req.body;
-    const info = { email, username, password };
+    const { username, email, password , fullName} = req.body;
+    const info = { email, username, password, fullName };
 
     if (!email || !username || !password) {
       return res.status(400).json("Make sure all inputs are valid");
