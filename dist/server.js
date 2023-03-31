@@ -22,7 +22,7 @@ app.use(express_1.default.json());
 //use global middlewares
 app.use(errorMiddleware_1.default);
 //routes
-app.use("api/v1/auth", user_1.default);
+app.use("/api/v1/auth", user_1.default);
 //connect db and listen on port
 app.listen(PORT, async () => {
     try {

@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(customError);
 
 //routes
-app.use("api/v1/auth", userRoutes);
+app.use("/api/v1/auth", userRoutes);
 
 
 //connect db and listen on port
